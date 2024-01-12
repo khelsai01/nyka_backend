@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const productSchema = mongoose.Schema({
     name: {type: String,required: true,maxlength: 50},
-      picture: {
+      avatar: {
         type: String,
         required: true,
         validate: {
