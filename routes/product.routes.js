@@ -1,9 +1,24 @@
 const express = require("express");
 const { ProductModel } = require("../models/product.model");
 const { auth } = require("../middleware/authMiddleware");
+// const multer = require("multer");
+
 
 const productRouter = express.Router();
-// productRouter.use(auth)
+productRouter.use(auth)
+
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//       cb(null, '../frontend/src/images')
+//     },
+//     filename: function (req, file, cb) {
+      
+//       cb(null, file.originalname)
+//     }
+//   })
+  
+//   const upload = multer({ storage: storage });
+
 productRouter.get("/products",async(req,res)=>{
 
     try {

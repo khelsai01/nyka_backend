@@ -9,6 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(errorHandler);
+
+
 app.use("/api",userRouter,productRouter);
 
 app.listen(8000, async()=>{
